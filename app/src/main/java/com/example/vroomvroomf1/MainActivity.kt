@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VroomVroomF1Theme {
-                AppNavigation()  // ✅ Call the navigation function
+                AppNavigation()
             }
         }
     }
@@ -27,9 +27,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun AppNavigation() {
-    val navController = rememberNavController()  // ✅ Initialize navigation
+    val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "main") {
-        composable("main") { MainScreen(navController) }  // ✅ Pass NavController
-        composable("info") { InfoScreen(navController) }  // ✅ Pass NavController
+        composable("main") { MainScreen(navController) }
+        composable("info") { InfoScreen(navController) }
     }
 }
